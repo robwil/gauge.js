@@ -222,13 +222,15 @@
     BaseGauge.prototype.configDisplayScale = function() {
       var backingStorePixelRatio, devicePixelRatio, height, prevDisplayScale, width;
       prevDisplayScale = this.displayScale;
-      if (this.options.highDpiSupport === false) {
-        delete this.displayScale;
-      } else {
-        devicePixelRatio = window.devicePixelRatio || 1;
-        backingStorePixelRatio = this.ctx.webkitBackingStorePixelRatio || this.ctx.mozBackingStorePixelRatio || this.ctx.msBackingStorePixelRatio || this.ctx.oBackingStorePixelRatio || this.ctx.backingStorePixelRatio || 1;
-        this.displayScale = devicePixelRatio / backingStorePixelRatio;
-      }
+      // if (this.options.highDpiSupport === false) {
+      //   delete this.displayScale;
+      //   this.canvas.G__width = this.canvas.width;
+      //   this.canvas.G__height = this.canvas.height;
+      // } else {
+      //   devicePixelRatio = window.devicePixelRatio || 1;
+      //   backingStorePixelRatio = this.ctx.webkitBackingStorePixelRatio || this.ctx.mozBackingStorePixelRatio || this.ctx.msBackingStorePixelRatio || this.ctx.oBackingStorePixelRatio || this.ctx.backingStorePixelRatio || 1;
+      //   this.displayScale = devicePixelRatio / backingStorePixelRatio;
+      // }
       if (this.displayScale !== prevDisplayScale) {
         width = this.canvas.G__width || this.canvas.width;
         height = this.canvas.G__height || this.canvas.height;

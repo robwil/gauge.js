@@ -1,10 +1,8 @@
 {
   "name": "bernii/gauge.js",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": [
-    "dist/gauge.js",
-    "dist/gauge.min.js",
-    "dist/gauge.coffee"
+    "dist/gauge.js"
   ],
   "description": "100% native and cool looking animated JavaScript/CoffeScript gauge",
   "license": "MIT",
